@@ -1,0 +1,111 @@
+/*Styling indhold:
+
+1. Body og generel
+
+
+2. header
+
+3. indhold
+3.1
+
+4. footer */
+/*1. Body og genrel styling*/
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*2. Header styling */
+
+
+/*skal laves så logo og nav ligger på samme linje*/
+header {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    list-style: none;
+    overflow: hidden;
+    background-color: #28292c;
+
+}
+
+
+.header_menu li {
+
+    display: inline;
+    color: #ccc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+
+
+}
+
+.header_menu a {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 14px;
+
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+
+/*4. footer*/
+
+footer {
+    padding: 70px 0 20px;
+    background-color: #28292c;
+    color: #9ea1a5;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+footer .some_footer ul {
+    margin: 15px;
+}
+
+footer .some_footer ul li a svg {
+    width: 50px;
+    height: 50px;
+    fill: #373d46;
+}
+
+footer .service_menu {
+    text-align: right;
+}
+
+footer .service_menu ul li a {
+    color: #ccc;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media (min-width: 1025px)
+.navigation ul.level-1 {
+    text-align: right;
+}*/
