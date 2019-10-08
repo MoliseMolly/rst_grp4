@@ -19,6 +19,11 @@ a {
     text-decoration: none;
 }
 
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
 /*2. Header styling */
 
 
@@ -29,7 +34,6 @@ header {
     padding-bottom: 20px;
 
     list-style: none;
-    overflow: hidden;
     background-color: #28292c;
 
 }
@@ -44,8 +48,6 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
-
-
 }
 
 .header_menu a {
@@ -61,10 +63,48 @@ a:hover {
 
 /*3. indhold*/
 
-.kasseindhold {
-    height: 200px;
-    background-color: burlywood;
+#logo {
+    position: absolute;
+    width: 12%;
+    margin-left: 70%;
+    margin-top: 900px;
 }
+
+#titel {
+    color: white;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 960px;
+    font-size: 42px;
+}
+
+video {
+    /*not work if the screen ratio is below 16/9*/
+    width: 100%;
+    height: auto;
+}
+
+#videoBG {
+    z-index: -1;
+}
+
+.kasseindhold {
+    width: 100%
+}
+
+#imgBG {
+    z-index: -1;
+}
+
+#commercial {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    height: auto;
+    margin: 10%;
+}
+
+
 
 
 /*4. footer*/
@@ -100,6 +140,9 @@ footer .service_menu ul li a {
     font-size: 14px;
 }
 
+img {
+    width: 100%;
+}
 
 
 
@@ -107,11 +150,20 @@ footer .service_menu ul li a {
 
 
 
+/*
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width: 100%;
+        height: auto;
+    }
+}
 
-
-
-
-
+@media (max-aspect-ratio: 16/9) {
+    #videoBG {
+        width: auto;
+        height: 100%;
+    }
+}*/
 
 /*@media (min-width: 1025px)
 .navigation ul.level-1 {
