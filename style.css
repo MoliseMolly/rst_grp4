@@ -26,6 +26,7 @@ a {
 header {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 20px;
 
     list-style: none;
     overflow: hidden;
@@ -56,6 +57,13 @@ header {
 
 a:hover {
     color: #FFFFFF;
+}
+
+/*3. indhold*/
+
+.kasseindhold {
+    height: 200px;
+    background-color: burlywood;
 }
 
 
