@@ -63,19 +63,22 @@ a:hover {
 
 /*3. indhold*/
 
-#logo {
+#titel_pos {
     position: absolute;
-    width: 12%;
     margin-left: 70%;
-    margin-top: 900px;
+    margin-top: 40%;
+
+}
+
+
+#logo {
+    width: 50%;
 }
 
 #titel {
     color: white;
-    position: absolute;
-    margin-left: 70%;
-    margin-top: 960px;
-    font-size: 42px;
+    font-size: 4vw;
+    margin: 0;
 }
 
 video {
@@ -89,7 +92,7 @@ video {
 }
 
 .kasseindhold {
-    width: 100%
+    width: 100%;
 }
 
 #imgBG {
