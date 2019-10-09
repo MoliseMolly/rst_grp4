@@ -24,6 +24,10 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    font-family: 'safetyregular';
+}
+
 /*2. Header styling */
 
 
@@ -104,7 +108,41 @@ video {
     margin: 10%;
 }
 
+#streamers {
+    width: 100%;
+    height: calc(9/16*100vw);
+    display: flex;
+    flex-wrap: wrap;
+}
 
+#col1_stream {
+    margin: auto 4%;
+}
+
+#col2_stream {
+    margin: auto 4%;
+}
+
+.col {
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+#streamersfront {
+    margin-bottom: 2%;
+}
+
+.grid_container {
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.streamer_item:hover {
+    transition: 0.25s ease-in-out;
+    transform: scale(1.23);
+    cursor: pointer;
+}
 
 
 /*4. footer*/
@@ -138,6 +176,56 @@ footer .service_menu ul li a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+}
+
+
+
+
+/* safety font */
+
+@font-face {
+    font-family: 'safetyregular';
+    src: url('font/safety-webfont.woff2') format('woff2'),
+        url('font/safety-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'safetybold';
+    src: url('font/safety-bold-webfont.woff2') format('woff2'),
+        url('font/safety-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'safetydemibold';
+    src: url('font/safety-demibold-webfont.woff2') format('woff2'),
+        url('font/safety-demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'safetylight';
+    src: url('font/safety-light-webfont.woff2') format('woff2'),
+        url('font/safety-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 img {
