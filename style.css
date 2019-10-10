@@ -294,15 +294,17 @@ img {
     }
 
     .direction {
-        margin-left: -12vw;
+        margin-left: -57.5vw;
+        margin-top: -5vw;
         width: 141%;
         display: flex;
         flex-direction: column;
-        background-color: #373d46;
+        background-color: hsla(216, 12%, 25%, 0.7);
         position: relative;
+        text-align: center;
         z-index: 2;
-        padding: 5vw;
-        border: 1px solid black;
+        padding: 2vw 25vw;
+
     }
 
     #burgermenu {
@@ -310,7 +312,8 @@ img {
         height: 15px;
         margin-left: 26vw;
         display: block;
-        z-index: 1;
+        position: relative;
+        z-index: 3;
         padding: 1vw;
         background-image: url(img/burger.svg);
         background-repeat: round;
