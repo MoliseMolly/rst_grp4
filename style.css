@@ -24,10 +24,19 @@ body {
     overflow-x: hidden;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+a {
     font-family: 'safetyregular';
+}
+
+h1 {
     font-size: 30px;
 }
+
+h4 {}
 
 p {
     font-family: 'Open Sans';
@@ -44,6 +53,9 @@ header {
     position: absolute;
 }
 
+#burgermenu {
+    display: none;
+}
 
 .header_menu li {
     display: inline;
@@ -89,6 +101,8 @@ video {
 
 #videoBG {
     z-index: -1;
+    /* this video is positioned relative, so the burgermenu can be clickable on top of it */
+    position: relative;
 }
 
 .kasseindhold {
@@ -147,7 +161,16 @@ video {
     animation: notice 3s ease-in-out infinite alternate;
 }
 
-#streamer4:hover,
+
+.streamer_name {
+    position: absolute;
+    z-index: 1;
+    color: #FFF;
+    margin: 0.2vw;
+    font-size: 11px;
+}
+
+
 .streamer_item:hover {
     animation: 0;
     transition: 0.25s ease-in-out;
@@ -265,8 +288,50 @@ img {
 }
 
 
+@media screen and (max-width: 768px) {
+    .header_menu {
+        display: none;
+    }
+
+    .direction {
+        margin-left: -12vw;
+        width: 141%;
+        display: flex;
+        flex-direction: column;
+        background-color: #373d46;
+        position: relative;
+        z-index: 2;
+        padding: 5vw;
+        border: 1px solid black;
+    }
+
+    #burgermenu {
+        width: 15px;
+        height: 15px;
+        margin-left: 26vw;
+        display: block;
+        z-index: 1;
+        padding: 1vw;
+        background-image: url(img/burger.svg);
+        background-repeat: round;
+    }
 
 
+}
+
+
+@media screen and (max-width: 600px) {
+    .grid_container {
+        grid-gap: 1px;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0.1vw 30%;
+    }
+
+    .right_margin {
+        margin: 10%;
+    }
+
+}
 
 
 
