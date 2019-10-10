@@ -83,6 +83,10 @@ a:hover {
 }
 
 
+#front {
+    margin-bottom: -10px;
+}
+
 #logo {
     width: 50%;
 }
@@ -126,11 +130,10 @@ video {
     height: auto;
     margin: 6% 0;
     display: flex;
-    flex-wrap: wrap;
 }
 
 .col {
-    flex-basis: 300px;
+    flex-basis: 1px;
     flex-grow: 1;
 }
 
@@ -287,6 +290,17 @@ img {
     width: 100%;
 }
 
+@media screen and (max-width: 1280px) {
+    .streamer_name {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .streamer_name {
+        font-size: 6px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .header_menu {
@@ -319,6 +333,14 @@ img {
         background-repeat: round;
     }
 
+    p {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
 
 }
 
@@ -332,6 +354,14 @@ img {
 
     .right_margin {
         margin: 10%;
+    }
+
+    #streamers {
+        flex-direction: column;
+    }
+
+    .streamer_name {
+        font-size: 14px;
     }
 
 }

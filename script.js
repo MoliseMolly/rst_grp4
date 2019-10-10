@@ -7,6 +7,7 @@ function start() {
 
 function burger() {
     console.log("we here");
+    //this code we have partly stolen from this example: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar
     var x = document.querySelector(".header_menu");
     if (x.style.display === "block") {
         x.style.display = "none";
