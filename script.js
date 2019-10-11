@@ -12,10 +12,10 @@ function burger() {
     if (x.style.display === "block") {
         x.style.display = "none";
         document.querySelector("#burgermenu").style.backgroundImage = "url(img/burger.svg)";
-        document.querySelector("#burgermenu").style.width = "15px";
+        document.querySelector("#burgermenu").style.width = "11px";
     } else {
         x.style.display = "block";
         document.querySelector("#burgermenu").style.backgroundImage = "url(img/exitburger.svg)";
-        document.querySelector("#burgermenu").style.width = "10px";
+        document.querySelector("#burgermenu").style.width = "6px";
     }
 }

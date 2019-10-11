@@ -47,10 +47,12 @@ p {
 
 /*skal laves så logo og nav ligger på samme linje*/
 header {
-    padding: 10px;
-    margin-left: 60%;
+    width: 800px;
+    padding-left: 800px;
     list-style: none;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 #burgermenu {
@@ -58,6 +60,7 @@ header {
 }
 
 .header_menu li {
+
     display: inline;
     padding: 10px;
 }
@@ -113,16 +116,12 @@ video {
     width: 100%;
 }
 
-#imgBG {
-    z-index: -1;
-}
-
 #commercial {
     position: absolute;
     z-index: 1;
     width: 80%;
     height: auto;
-    margin: 10%;
+    margin: 5% 10%;
 }
 
 #streamers {
@@ -208,33 +207,27 @@ video {
 /*4. footer*/
 
 footer {
-    padding: 70px 0 20px;
+    padding: 70px 20px 20px 20px;
     background-color: #28292c;
-    color: #9ea1a5;
-    padding-left: 20px;
-    padding-right: 20px;
+    color: #ccc;
+    display: flex;
+    font-size: 11px;
 }
 
-footer .some_footer ul {
-    margin: 15px;
-}
 
-footer .some_footer ul li a svg {
-    width: 50px;
-    height: 50px;
-    fill: #373d46;
-}
 
 footer .service_menu {
     text-align: right;
+    margin: 12px;
+}
+
+footer ul {
+    margin: 12px 0;
 }
 
 footer .service_menu ul li a {
     color: #ccc;
-    list-style: none;
-    text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
 }
 
 
@@ -291,9 +284,17 @@ img {
     width: 100%;
 }
 
+
 @media screen and (max-width: 1280px) {
     .streamer_name {
         font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    header {
+        padding-left: 600px;
+
     }
 }
 
@@ -304,6 +305,13 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+
+    header {
+        padding: 10px;
+        left: 60%;
+        transform: translate(0, 0);
+    }
+
     .header_menu {
         display: none;
     }
@@ -323,7 +331,7 @@ img {
     }
 
     #burgermenu {
-        width: 15px;
+        width: 11px;
         height: 15px;
         margin-left: 26vw;
         display: block;
@@ -334,7 +342,7 @@ img {
         background-repeat: round;
     }
 
-    p {
+    #streamers .right_margin p {
         font-size: 12px;
     }
 
@@ -364,6 +372,8 @@ img {
     .streamer_name {
         font-size: 14px;
     }
+
+
 
 }
 

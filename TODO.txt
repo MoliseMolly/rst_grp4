@@ -3,7 +3,3 @@ Indsæt korrekte videoer
 Lav lydknap til reklamen
 
 Fjern den anden baggrundsvideo på mobile
-
-Fix footer
-
-Fix pc menu
