@@ -1,5 +1,1 @@
-Indsæt korrekte videoer
-
-Lav lydknap til reklamen
-
-Fjern den anden baggrundsvideo på mobile
+(Fjern den anden baggrundsvideo på mobile)
