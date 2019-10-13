@@ -3,6 +3,7 @@ console.log("begin");
 
 function start() {
     document.querySelector("#burgermenu").addEventListener("click", burger);
+    document.querySelector("#read_article").addEventListener("click", readArticle);
 }
 
 function burger() {
@@ -18,4 +19,10 @@ function burger() {
         document.querySelector("#burgermenu").style.backgroundImage = "url(img/exitburger.svg)";
         document.querySelector("#burgermenu").style.width = "6px";
     }
+}
+
+function readArticle() {
+    this.style.display = "none";
+    document.querySelector(".grey_gradient").style.display = "none";
+    document.querySelector("#pimp_article").style.height = "auto";
 }
