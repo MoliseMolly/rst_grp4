@@ -2,8 +2,17 @@ document.addEventListener("DOMContentLoaded", start);
 console.log("begin");
 
 function start() {
+    let streams = ["www.twitch.tv/marckozhd/", "www.twitch.tv/jk_fifa/", "www.twitch.tv/fjallefar/", "www.twitch.tv/brianfromdenmark/", "www.twitch.tv/jaxstyle/"];
+    let streamerList = document.querySelectorAll(".streamer_item");
     document.querySelector("#burgermenu").addEventListener("click", burger);
     document.querySelector("#read_article").addEventListener("click", readArticle);
+
+    streamerList.forEach(function (item, i) {
+        item.addEventListener("click", function () {
+            openStream(streams[i]);
+        });
+
+    });
 }
 
 function burger() {
@@ -19,6 +28,12 @@ function burger() {
         document.querySelector("#burgermenu").style.backgroundImage = "url(img/exitburger.svg)";
         document.querySelector("#burgermenu").style.width = "6px";
     }
+}
+
+function openStream(s) {
+    // Example on opening a new tab with link in js: https://stackoverflow.com/questions/4907843/open-a-url-in-a-new-tab-and-not-a-new-window-using-javascript
+    let win = window.open(s, '_blank');
+    win.focus();
 }
 
 function readArticle() {
