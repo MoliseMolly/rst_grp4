@@ -257,17 +257,29 @@ video {
     margin-top: 150px;
 }
 
-.button {
-    color: #fff;
+button {
+    border-style: none;
+    color: #414b5a;
     background-color: #3f0;
     width: 150px;
     padding: 20px;
     font-size: 20px;
     font-family: 'safetyregular';
     text-align: center;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #414b5a;
+    cursor: pointer;
+}
+
+.center {
     margin-left: 50%;
     transform: translateX(-50%);
 }
+
+
 
 #pimp_article {
     height: 200px;
@@ -290,6 +302,21 @@ video {
     margin-left: 5%;
 }
 
+#stats {
+    display: flex;
+    background-color: #EAEAEA;
+    margin-bottom: -4px;
+}
+
+#stats_text {
+    width: 260px;
+    position: absolute;
+    color: #fff;
+    text-align: right;
+    left: 75%;
+    margin-top: 28%;
+    transform: translate(-50%, -50%);
+}
 
 /*4. footer*/
 
@@ -487,6 +514,21 @@ img {
         width: 70%;
         margin: 0 5%;
         margin-bottom: 100px;
+    }
+
+    #stats {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #stats_text {
+        width: 260px;
+        position: absolute;
+        color: #fff;
+        text-align: right;
+        left: 57%;
+        margin-top: 78%;
+        transform: translate(-50%, -50%);
     }
 
 }
