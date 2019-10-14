@@ -47,13 +47,33 @@ p {
 
 
 /*skal laves så logo og nav ligger på samme linje*/
-header {
-    width: 550px;
+
+#header_background {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #373d46;
+}
+
+#header_background:hover {}
+
+#logo_container {
+    padding: 5px;
+    width: 150px;
+    position: absolute;
+    left: 15vw;
+    transform: translateX(-50%);
+}
+
+#nav_position {
+    width: 650px;
+    padding: 10px;
     /*padding-left: 800px;*/
     list-style: none;
     position: absolute;
-    left: 100%;
-    transform: translateX(-100%);
+    left: 67%;
+    transform: translateX(-50%);
 }
 
 #burgermenu {
@@ -69,7 +89,9 @@ header {
 .header_menu a {
     color: #FFF;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 13px;
+    font-family: 'Safetybold';
+    margin-top: -10px;
 }
 
 a:hover {
@@ -89,10 +111,6 @@ a:hover {
 
 #front {
     margin-bottom: -10px;
-}
-
-#logo {
-    width: 50%;
 }
 
 #titel {
@@ -370,9 +388,12 @@ img {
 
 @media screen and (max-width: 768px) {
 
-    header {
-        padding: 0;
+    #nav_position {
         width: 80vw;
+        padding: 10px;
+        list-style: none;
+        position: absolute;
+
         left: 50%;
         transform: translateX(-50%);
     }
@@ -382,6 +403,9 @@ img {
     }
 
     .direction {
+
+        margin-top: 45px;
+        padding: 20px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -390,15 +414,17 @@ img {
     }
 
     #burgermenu {
-        width: 11px;
+        position: absolute;
+        left: 90%;
+        z-index: 2;
+        transform: translateX(-50deg);
+        width: 20px;
         height: 15px;
-        margin-left: 95%;
-        display: block;
-        position: relative;
-        z-index: 3;
-        padding: 1vw;
+        display: inline;
+        padding-top: 24px;
         background-image: url(img/burger.svg);
         background-repeat: round;
+
     }
 
     #streamers .right_margin p {
