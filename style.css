@@ -11,19 +11,27 @@
 4. footer */
 /*1. Body og genrel styling*/
 
-li {
-    list-style: none;
+/* Her deklareres variabelfarver. Fordelen ved dette er at nye farver hurtigt kan afprøves og justeres, da det kun skal rettes et sted */
+:root {
+    --main-bg-color: #fff;
+    --main-accent-color: #3f0;
+    --secondary-accent-color: #ff370f;
+    --main-dark-color: #373d46;
+    --secondary-dark-color: #414b5a;
+    --secondary-bg-color: #EAEAEA;
 }
 
 a {
     text-decoration: none;
 }
 
+/* overflow-x skjules for at der ikke kommer en scrollbar i bunden, grundet de 16px der er på pc når der kan scrolles nedad. Mac er anderledes, og dette er et fix til det problem */
 body {
     margin: 0;
     overflow-x: hidden;
 }
 
+/* Overskrifter og links sættes til fonten Safety vi fik fra SikkerTrafik */
 h1,
 h2,
 h3,
@@ -36,25 +44,28 @@ h1 {
     font-size: 30px;
 }
 
-h4 {}
-
 p {
     font-family: 'Open Sans';
     font-size: 14px;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /*2. Header styling */
+
+/* Da headeren ligger ovenpå baggrundsvideoen, sættes den til absolute. Det behøves ikke at være absolute, da elementet ligger i toppen i forvejen, men det er en ubetydelig ændring, og altså en der ikke er vær at bruge tid på */
 
 #header_background {
     position: absolute;
     z-index: 0;
     width: 100%;
     height: 40px;
-    background-color: #373d46;
+    background-color: var(--main-dark-color);
 }
 
-#header_background:hover {}
-
+/* Logoet skal ikke ligge helt fast i headeren. Det skal være langt ude i siden, når browseren er lille, og mere mod midten når browseren er stor. Derfor sættes left til 15vw og samtidig skubbes logoet 75px til venstre. */
 #logo_container {
     padding: 5px;
     width: 150px;
@@ -66,78 +77,74 @@ p {
 #nav_position {
     width: 650px;
     padding: 10px;
-    /*padding-left: 800px;*/
     list-style: none;
     position: absolute;
+    z-index: 1;
     left: 67%;
     transform: translateX(-50%);
 }
 
+/* Burgermenuen skal kun være aktiv når vinduet er småt, derfor skjules denne i pc view */
 #burgermenu {
     display: none;
 }
 
-.header_menu li {
-
-    display: inline;
-    padding: 7px;
-}
-
 .header_menu a {
-    color: #FFF;
+    color: var(--main-bg-color);
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'Safetybold';
     margin-top: -10px;
+    padding: 12px;
 }
 
+/* Links bytter om på sine to farver ved hover */
 a:hover {
-    background-color: #FFF;
-    color: #373d46;
+    background-color: var(--main-bg-color);
+    color: var(--main-dark-color);
 }
 
 /*3. indhold*/
 
 #titel_pos {
+    width: 400px;
     position: absolute;
-    margin-left: 70%;
-    margin-top: 40%;
+    left: 75%;
+    margin-top: 35vw;
+    transform: translateX(-200px);
 }
 
+/* Der er et mindre mellemrum mellem sektionerne, så dette fjerne med en negativ margin. Hvor det kommer fra kan umiddelbart ikke lige findes, så det fixes i stedet på denne måde */
 #front {
     margin-bottom: -10px;
 }
 
 #titel {
-    color: white;
-    font-size: 4vw;
-    margin: 0;
+    color: var(--main-bg-color);
+    font-size: 40px;
 }
 
-video {
-    /*not work if the screen ratio is below 16/9*/
+
+
+/* Baggrundsvideoen sættes til at fylde hele startviewet på pc */
+#videoBG {
     width: 100%;
     height: auto;
-}
-
-#videoBG {
-    z-index: -1;
-    /* this video is positioned relative, so the burgermenu can be clickable on top of it */
-    position: relative;
 }
 
 .commercial_container {
     width: 100%;
 }
 
+/* Reklamevideoen skal poppe ud, så den sættes til at fylde 80% og centreres */
 #commercial {
     position: absolute;
-    z-index: 1;
     width: 80%;
     height: auto;
     margin: 0% 10%;
 }
 
+/* streamer sektionen anvender flex, da den indeholder to kolonner. I pc ligger de to kolonner på række og på mobil ligger det som en enkel kolonne */
 #streamers {
     width: 100%;
     height: auto;
@@ -145,58 +152,60 @@ video {
     display: flex;
 }
 
+/* Kolonnerne får linære værdier, de skal bare fylde lige meget, så denne class bruges på begge */
 .col {
-    flex-basis: 1px;
+    flex-basis: 300px;
     flex-grow: 1;
 }
 
+/* Elementerne får en auto margin på højden, så de altid ligger i midten på y aksen */
 #col1_stream {
     margin: auto 4%;
 }
 
 #col2_stream {
     margin: auto 4%;
-
 }
 
-.right_margin {
-    margin: 0 20%;
+/* Denne class er en margin på 10% i højre og venstre */
+.side_margin {
+    margin: 0 10%;
 }
 
 #streamersfront {
     margin-bottom: 2%;
 }
 
+/* Streamerne kommer i et grid med 5 elementer pr. række. Det kunne også laves med flex, men når viewet ændres på mobil, så er det nemmere at rette det til 2 kolonner */
 .grid_container {
     display: grid;
     grid-gap: 2%;
     grid-template-columns: repeat(5, 1fr);
 }
 
+/* Det ene streamer element har en animation, hvor det hintes at man kan klikke på dem. Den er sat til ease-in-out for en mere naturlig bevægelse i animationen */
 #streamer4 {
     animation: notice 3s ease-in-out infinite alternate;
 }
 
-
+/* Streamernes navne sætte ovenpå billederne med position absolute og z-index 1 */
 .streamer_name {
     position: absolute;
     z-index: 1;
-    color: #FFF;
+    color: var(--main-bg-color);
     margin: 0.2vw;
     font-size: 15px;
 }
 
-
+/* Når der hovers på en streamer vokser billedet og tekst med 23% på 0.25 sekunder */
 .streamer_item:hover {
-    animation: 0;
     transition: 0.25s ease-in-out;
     transform: scale(1.23);
     cursor: pointer;
     z-index: 2;
 }
 
-
-
+/* Her er animationens keyframes. Den er stille det meste af tiden, men efter 60% af tiden roteres der en smule, for at lave en subtil hentydning til at der kan klikkes her  */
 @keyframes notice {
     0% {
         transform: rotate(0deg);
@@ -213,20 +222,18 @@ video {
     100% {
         transform: rotate(0deg);
     }
-
-
 }
 
 #stats {
     display: flex;
-    background-color: #EAEAEA;
+    background-color: var(--secondary-bg-color);
     margin-bottom: -4px;
 }
 
 #stats_text {
     width: 260px;
     position: absolute;
-    color: #fff;
+    color: var(--main-bg-color);
     text-align: right;
     left: 80%;
     margin-top: 33%;
@@ -287,12 +294,12 @@ video {
     border-radius: 50%;
 }
 
-#driver_text {
-    background-color: #ff370f;
+.driver_text {
+    background-color: var(--secondary-accent-color);
 }
 
-#passenger_text {
-    background-color: #414b5a;
+.passenger_text {
+    background-color: var(--secondary-dark-color);
     margin-left: 15px;
 }
 
@@ -306,7 +313,7 @@ video {
     margin: 1% 37.5% 2% 37.5%;
     transform: rotate(-90deg);
     border-radius: 50%;
-    background-color: #414b5a;
+    background-color: var(--secondary-dark-color);
 
     border: 2px solid #EAEAEA;
 }
@@ -333,7 +340,7 @@ video {
 }
 
 .white_text {
-    color: #fff;
+    color: var(--main-bg-color);
 }
 
 .pimp_round_img {
@@ -359,8 +366,8 @@ video {
 
 button {
     border-style: none;
-    color: #414b5a;
-    background-color: #3f0;
+    color: var(--secondary-dark-color);
+    background-color: var(--main-accent-color);
     width: 150px;
     padding: 20px;
     font-size: 20px;
@@ -369,8 +376,8 @@ button {
 }
 
 button:hover {
-    color: #fff;
-    background-color: #414b5a;
+    color: var(--main-bg-color);
+    background-color: var(--secondary-dark-color);
     cursor: pointer;
 }
 
@@ -406,8 +413,8 @@ button:hover {
 
 footer {
     padding: 70px 20px 20px 20px;
-    background-color: #28292c;
-    color: #ccc;
+    background-color: var(--main-dark-color);
+    color: var(--main-bg-color);
     display: flex;
     font-size: 11px;
 }
@@ -421,12 +428,8 @@ footer .service_menu {
     margin: 12px;
 }
 
-footer ul {
-    margin: 12px 0;
-}
-
 footer .service_menu ul li a {
-    color: #ccc;
+    color: var(--secondary-bg-color);
     text-transform: uppercase;
 }
 
@@ -519,6 +522,11 @@ img {
         margin-left: 20%;
         margin-right: 20%;
     }
+
+
+    #titel {
+        font-size: 27px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -528,7 +536,6 @@ img {
         padding: 10px;
         list-style: none;
         position: absolute;
-
         left: 50%;
         transform: translateX(-50%);
     }
@@ -538,7 +545,6 @@ img {
     }
 
     .direction {
-
         margin-top: 45px;
         padding: 20px;
         height: auto;
@@ -548,11 +554,17 @@ img {
         text-align: center;
     }
 
+    .direction a {
+        position: relative;
+        z-index: 4;
+        padding: 12px;
+        text-align: center;
+    }
+
     #burgermenu {
         position: absolute;
         left: 90%;
         z-index: 2;
-        transform: translateX(-50deg);
         width: 20px;
         height: 15px;
         display: inline;
@@ -581,6 +593,19 @@ img {
     .circle {
         width: 10px;
         height: 10px;
+    }
+
+    button {
+        width: 100px;
+        padding: 10px;
+        font-size: 15px;
+        font-family: 'safetyregular';
+        text-align: center;
+    }
+
+    #stats_text {
+        width: 260px;
+        left: 75%;
     }
 
 
@@ -640,32 +665,10 @@ img {
     #stats_text {
         width: 260px;
         position: absolute;
-        color: #fff;
+        color: var(--main-bg-color);
         text-align: right;
         left: 57%;
         margin-top: 78%;
         transform: translate(-50%, -50%);
     }
 }
-
-
-
-/*
-@media (min-aspect-ratio: 16/9) {
-    #videoBG {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-aspect-ratio: 16/9) {
-    #videoBG {
-        width: auto;
-        height: 100%;
-    }
-}*/
-
-/*@media (min-width: 1025px)
-.navigation ul.level-1 {
-    text-align: right;
-}*/
