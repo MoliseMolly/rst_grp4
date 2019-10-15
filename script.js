@@ -6,6 +6,12 @@ function start() {
     let streamerList = document.querySelectorAll(".streamer_item");
     document.querySelector("#burgermenu").addEventListener("click", burger);
     document.querySelector("#read_article").addEventListener("click", readArticle);
+    document.querySelector("#test").addEventListener("click", function () {
+        // Example on opening a new tab with link in js: https://stackoverflow.com/questions/4907843/open-a-url-in-a-new-tab-and-not-a-new-window-using-javascript
+        let win = window.open("https://play.kahoot.it/v2/?quizId=b6da4f54-0005-465d-82b6-97f1329553a6",
+            '_blank');
+        win.focus();
+    });
 
     streamerList.forEach(function (item, i) {
         item.addEventListener("click", function () {
@@ -30,12 +36,6 @@ function burger() {
         document.querySelector("#burgermenu").style.backgroundImage = "url(img/exitburger.svg)";
         document.querySelector("#burgermenu").style.width = "16px";
     }
-}
-
-function openStream(s) {
-    // Example on opening a new tab with link in js: https://stackoverflow.com/questions/4907843/open-a-url-in-a-new-tab-and-not-a-new-window-using-javascript
-    let win = window.open(s, '_blank');
-    win.focus();
 }
 
 function readArticle() {

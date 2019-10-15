@@ -45,9 +45,6 @@ p {
 
 /*2. Header styling */
 
-
-/*skal laves så logo og nav ligger på samme linje*/
-
 #header_background {
     position: absolute;
     z-index: 0;
@@ -105,9 +102,7 @@ a:hover {
     position: absolute;
     margin-left: 70%;
     margin-top: 40%;
-
 }
-
 
 #front {
     margin-bottom: -10px;
@@ -222,6 +217,113 @@ video {
 
 }
 
+#stats {
+    display: flex;
+    background-color: #EAEAEA;
+    margin-bottom: -4px;
+}
+
+#stats_text {
+    width: 260px;
+    position: absolute;
+    color: #fff;
+    text-align: right;
+    left: 80%;
+    margin-top: 33%;
+    transform: translate(-50%, -50%);
+}
+
+.graph_headline {
+    width: 57%;
+    margin: 5% 21.5% 1% 21.5%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#barchart {
+    width: 70%;
+    margin: 0% 15% 0% 15%;
+    font-family: 'safetyregular';
+
+}
+
+.bgr line {
+    stroke: #000;
+    stroke-width: .5;
+}
+
+.passenger {
+    stroke: #414b5a;
+    stroke-width: 4;
+}
+
+.driver {
+    stroke: #ff370f;
+    stroke-width: 4;
+}
+
+.bgr text {
+    font-size: 7px;
+}
+
+.bars text {
+    font-size: 5px;
+}
+
+.graph_info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+    margin-top: -2%;
+}
+
+.graph_info p {
+    margin: 0 5px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#driver_text {
+    background-color: #ff370f;
+}
+
+#passenger_text {
+    background-color: #414b5a;
+    margin-left: 15px;
+}
+
+#circle_headline {
+    text-align: center;
+}
+
+#piechart {
+    border: 2px solid #333;
+    width: 25%;
+    margin: 1% 37.5% 2% 37.5%;
+    transform: rotate(-90deg);
+    border-radius: 50%;
+    background-color: #414b5a;
+
+    border: 2px solid #EAEAEA;
+}
+
+.pie {
+    stroke-width: 100;
+    fill: none;
+
+}
+
+#pie1 {
+    stroke: #ff370f;
+    stroke-dashArray: calc(100 * 22 / 7);
+    stroke-dashOffset: calc(360 - 8 * 22 / 7);
+    border: 2px solid white;
+}
+
 #pimp_front_content {
     position: absolute;
     margin: auto 15%;
@@ -229,8 +331,6 @@ video {
     margin-top: 37%;
     transform: translateY(-50%);
 }
-
-#pimp .white_text {}
 
 .white_text {
     color: #fff;
@@ -300,22 +400,6 @@ button:hover {
 
 #pimp_article h3 {
     margin-left: 5%;
-}
-
-#stats {
-    display: flex;
-    background-color: #EAEAEA;
-    margin-bottom: -4px;
-}
-
-#stats_text {
-    width: 260px;
-    position: absolute;
-    color: #fff;
-    text-align: right;
-    left: 75%;
-    margin-top: 28%;
-    transform: translate(-50%, -50%);
 }
 
 /*4. footer*/
@@ -412,9 +496,28 @@ img {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .streamer_name {
         font-size: 6px;
+    }
+
+    .graph_headline {
+        font-size: 11px;
+    }
+
+    .graph_info p {
+        font-size: 11px;
+    }
+
+    .circle {
+        width: 15px;
+        height: 15px;
+    }
+
+    #barchart {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }
 
@@ -465,6 +568,19 @@ img {
 
     h1 {
         font-size: 25px;
+    }
+
+    .graph_headline {
+        font-size: 9px;
+    }
+
+    .graph_info p {
+        font-size: 9px;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
     }
 
 
@@ -518,7 +634,7 @@ img {
 
     #stats {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     #stats_text {
@@ -530,7 +646,6 @@ img {
         margin-top: 78%;
         transform: translate(-50%, -50%);
     }
-
 }
 
 

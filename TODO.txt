@@ -1,1 +1,2 @@
-(Fjern den anden baggrundsvideo på mobile)
+Videoer i mobil skal være kvadratiske
+Start video on scroll https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY

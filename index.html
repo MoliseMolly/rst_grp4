@@ -6,7 +6,7 @@
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <title>Kampagnenavn | SIKKERTRAFIK.DK</title>
+    <title>Bodybags Blir Aldrig Cool</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -61,7 +61,7 @@
     </header>
     <section id="front">
         <div id="titel_pos">
-            <h1 id="titel">Kampagnenavn</h1>
+            <h1 id="titel">Bodybags Blir Aldrig Cool</h1>
         </div>
         <video id="videoBG" autoplay muted loop>
             <source src="img/Bokeh%20-%2017732.mp4" type="video/mp4">
@@ -71,7 +71,7 @@
     <section class="commercial_container">
         <!-- this video has the tag controls, so that the user can unmute, rewind and enlarge the video -->
         <video id="commercial" controls autoplay muted loop>
-            <source src="img/Video%20Of%20New%20Car%20Model.mp4" type="video/mp4">
+            <source src="img/RST_film_lang_v3_grp4b.mp4" type="video/mp4">
         </video>
 
 
@@ -121,6 +121,101 @@
         </div>
     </section>
 
+
+    <section id="stats">
+
+        <div class="col">
+            <p class="graph_headline">Antal dræbte og alvorligt tilskadekomen i trafikken 2012 - 2017</p>
+            <svg id="barchart" viewbox=" -20 -10 220 170">
+
+                <g class="bars">
+                    <!-- Golden and blue graph vertical lines -->
+                    <line class="driver" x1="13" y1="140" x2="13" y2="137" />
+                    <line class="passenger" x1="18" y1="140" x2="18" y2="86" />
+                    <line class="driver" x1="41" y1="140" x2="41" y2="-1" />
+                    <line class="passenger" x1="46" y1="140" x2="46" y2="70" />
+                    <line class="driver" x1="66" y1="140" x2="66" y2="30" />
+                    <line class="passenger" x1="71" y1="140" x2="71" y2="110" />
+                    <line class="driver" x1="91" y1="140" x2="91" y2="41" />
+                    <line class="passenger" x1="96" y1="140" x2="96" y2="118" />
+                    <line class="driver" x1="116" y1="140" x2="116" y2="59" />
+                    <line class="passenger" x1="121" y1="140" x2="121" y2="121" />
+                    <line class="driver" x1="141" y1="140" x2="141" y2="79" />
+                    <line class="passenger" x1="146" y1="140" x2="146" y2="121" />
+                    <line class="driver" x1="166" y1="140" x2="166" y2="55" />
+                    <line class="passenger" x1="171" y1="140" x2="171" y2="97" />
+                </g>
+                <g class="bgr">
+                    <!-- Age -->
+                    <text x="10" y="150">0-17</text>
+                    <text x="35" y="150">18-24</text>
+                    <text x="60" y="150">25-34</text>
+                    <text x="85" y="150">35-44</text>
+                    <text x="110" y="150">45-54</text>
+                    <text x="135" y="150">55-64</text>
+                    <text x="164" y="150">65+</text>
+                    <!-- Numbers -->
+                    <text x="-16.5" y="2.5">1400</text>
+                    <text x="-16.5" y="22.5">1200</text>
+                    <text x="-16.5" y="42.5">1000</text>
+                    <text x="-13" y="62.5">800</text>
+                    <text x="-13" y="82.5">600</text>
+                    <text x="-13" y="102.5">400</text>
+                    <text x="-13" y="122.5">200</text>
+                    <text x="-10" y="142.5">0</text>
+                    <!-- horizontal bagground lines -->
+                    <line x1="0" y1="0" x2="180" y2="0" />
+                    <line x1="0" y1="20" x2="180" y2="20" />
+                    <line x1="0" y1="40" x2="180" y2="40" />
+                    <line x1="0" y1="60" x2="180" y2="60" />
+                    <line x1="0" y1="80" x2="180" y2="80" />
+                    <line x1="0" y1="100" x2="180" y2="100" />
+                    <line x1="0" y1="120" x2="180" y2="120" />
+                    <line x1="0" y1="140" x2="180" y2="140" />
+
+                </g>
+
+            </svg>
+            <span class="graph_info">
+                <div class="circle" id="driver_text">
+                </div>
+                <p>Fører</p>
+                <div class="circle" id="passenger_text"></div>
+                <p>Passager</p>
+            </span>
+
+            <p class="graph_headline" id="circle_headline">Fartbøder til unge billister</p>
+            <svg id="piechart" viewbox=" 0 0 100 100">
+
+                <circle id="pie1" class="pie" r="50" cx="50" cy="50" />
+
+            </svg>
+            <span class="graph_info">
+                <div class="circle" id="driver_text">
+                </div>
+                <p>18-24</p>
+                <div class="circle" id="passenger_text"></div>
+                <p>Andre Billister</p>
+            </span>
+        </div>
+
+        <div class="col">
+
+            <div id="stats_text">
+                <h1>Stats</h1>
+                <p>17-24 årige kører ikke så meget bil,<br>så der er ikke mange fartbøder at hente<br>men unge kører oftest galt</p>
+                <p>Kender du statistikker og klassiske <br>undskyldninger for at køre for stærkt?</p>
+                <button id="test">Tag Testen</button>
+            </div>
+
+            <img src="img/garage_car1.jpg" alt="">
+
+        </div>
+
+
+
+    </section>
+
     <section id="pimp">
 
         <div id="pimp_top">
@@ -136,7 +231,7 @@
             <img id="pimp_front" src="img/pimp_front.jpg" alt="">
         </div>
         <div class="grey_gradient">
-            <button class="center" id="read_article">Se Artiklen</button>
+            <button class="center" id="read_article">Open Pimp My Ride</button>
         </div>
         <div id="pimp_article">
 
@@ -158,26 +253,7 @@
     </section>
 
 
-    <section id="stats">
 
-        <div class="col">
-
-        </div>
-
-        <div class="col">
-
-            <div id="stats_text">
-                <h1>Stats</h1>
-                <p>17 - 24 årige kører ikke så meget bil,<br>så der er ikke mange fartbøder at hente<br>men de kører oftest galt</p>
-                <p>Kender du statistikker og klassiske <br>undskyldninger for at køre for stærkt?</p>
-                <button>Tag Testen</button>
-            </div>
-            <img src="img/garage_car1.jpg" alt="">
-        </div>
-
-
-
-    </section>
 
 
     <footer>
