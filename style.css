@@ -46,7 +46,7 @@ h1 {
 
 p {
     font-family: 'Open Sans';
-    font-size: 14px;
+    font-size: 18px;
 }
 
 ul {
@@ -183,9 +183,13 @@ a:hover {
     grid-template-columns: repeat(5, 1fr);
 }
 
-/* Det ene streamer element har en animation, hvor det hintes at man kan klikke på dem. Den er sat til ease-in-out for en mere naturlig bevægelse i animationen */
+/* To af streamerne har en animation, hvor det hintes at man kan klikke på dem. Den er sat til ease-in-out for en mere naturlig bevægelse i animationen */
+#streamer1 {
+    animation: notice_right 6s ease-in-out infinite alternate;
+}
+
 #streamer4 {
-    animation: notice 3s ease-in-out infinite alternate;
+    animation: notice_left 3s ease-in-out infinite alternate;
 }
 
 /* Streamernes navne sætte ovenpå billederne med position absolute og z-index 1 */
@@ -206,7 +210,7 @@ a:hover {
 }
 
 /* Her er animationens keyframes. Den er stille det meste af tiden, men efter 60% af tiden roteres der en smule, for at lave en subtil hentydning til at der kan klikkes her  */
-@keyframes notice {
+@keyframes notice_left {
     0% {
         transform: rotate(0deg);
     }
@@ -224,6 +228,24 @@ a:hover {
     }
 }
 
+@keyframes notice_right {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 #stats {
     display: flex;
     background-color: var(--secondary-bg-color);
@@ -231,13 +253,17 @@ a:hover {
 }
 
 #stats_text {
-    width: 260px;
+    width: 380px;
     position: absolute;
     color: var(--main-bg-color);
     text-align: right;
     left: 80%;
     margin-top: 33%;
     transform: translate(-50%, -50%);
+}
+
+#stats_text p {
+    font-size: 20px;
 }
 
 .graph_headline {
@@ -308,27 +334,22 @@ a:hover {
 }
 
 #piechart {
-    border: 2px solid #333;
     width: 25%;
-    margin: 1% 37.5% 2% 37.5%;
+    margin: 1% 37.5% 3% 37.5%;
     transform: rotate(-90deg);
     border-radius: 50%;
     background-color: var(--secondary-dark-color);
-
-    border: 2px solid #EAEAEA;
 }
 
 .pie {
     stroke-width: 100;
     fill: none;
-
 }
 
 #pie1 {
-    stroke: #ff370f;
+    stroke: var(--secondary-accent-color);
     stroke-dashArray: calc(100 * 22 / 7);
     stroke-dashOffset: calc(360 - 8 * 22 / 7);
-    border: 2px solid white;
 }
 
 #pimp_front_content {
