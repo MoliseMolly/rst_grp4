@@ -721,6 +721,19 @@ footer .service_menu ul li a {
         margin-bottom: 7%;
         margin-top: -2%;
     }
+
+    #pimp_front {
+        width: 200%;
+    }
+
+    #pimp_front_content {
+        width: 150%;
+        margin-top: 80%;
+    }
+
+    #row {
+        margin-top: 50px;
+    }
 }
 
 /* Alle billeder sættes til 100% af bredden */
