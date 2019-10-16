@@ -365,6 +365,10 @@ a:hover {
 /* Statistikker slut */
 
 /* Pimp section */
+#pimp {
+    margin-top: -14px;
+}
+
 
 #pimp_front_content {
     position: absolute;
