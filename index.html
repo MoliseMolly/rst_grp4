@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<!-- Sprog sat til dansk for søgemaskiners skyld. Dog ikke nødvendigt da siden ikke kan fremsøges -->
 <html lang="da">
 
 <head>
     <meta charset="utf-8">
+    <!-- Siden kan ikke findes af søgemaskiner, så derfor kan vi arbejde med sikkertrafiks brand på sitet -->
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -39,6 +41,7 @@
             </nav>
         </div>
     </header>
+
     <section id="front">
         <div id="titel_pos">
             <h1 id="titel">Bodybags Blir Aldrig Cool</h1>
@@ -107,6 +110,8 @@
 
         <div class="col">
             <p class="graph_headline">Antal dræbte og alvorligt tilskadekomen i trafikken 2012 - 2017</p>
+
+            <!-- Det her er barchartet. Det består af en masse linjer, som får forskellige farver og tykkelser i css -->
             <svg id="barchart" viewbox=" -20 -10 220 170">
 
                 <g class="bars">
@@ -259,4 +264,6 @@
     </footer>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>

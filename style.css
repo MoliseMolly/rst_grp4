@@ -106,6 +106,8 @@ a:hover {
 
 /*3. indhold*/
 
+/* Forsiden */
+
 #titel_pos {
     width: 400px;
     position: absolute;
@@ -144,6 +146,10 @@ a:hover {
     margin: 0% 10%;
 }
 
+/* Forside Slut  */
+
+/* Streamer Sectionen */
+
 /* streamer sektionen anvender flex, da den indeholder to kolonner. I pc ligger de to kolonner på række og på mobil ligger det som en enkel kolonne */
 #streamers {
     width: 100%;
@@ -154,7 +160,7 @@ a:hover {
 
 /* Kolonnerne får linære værdier, de skal bare fylde lige meget, så denne class bruges på begge */
 .col {
-    flex-basis: 300px;
+    flex-basis: 1px;
     flex-grow: 1;
 }
 
@@ -245,6 +251,10 @@ a:hover {
         transform: rotate(0deg);
     }
 }
+
+/* Streamer Section Slut */
+
+/* Statistikker */
 
 #stats {
     display: flex;
@@ -352,6 +362,10 @@ a:hover {
     stroke-dashOffset: calc(360 - 8 * 22 / 7);
 }
 
+/* Statistikker slut */
+
+/* Pimp section */
+
 #pimp_front_content {
     position: absolute;
     margin: auto 15%;
@@ -430,6 +444,8 @@ button:hover {
     margin-left: 5%;
 }
 
+/* Pimp Section slut */
+
 /*4. footer*/
 
 footer {
@@ -454,10 +470,9 @@ footer .service_menu ul li a {
     text-transform: uppercase;
 }
 
+/* Footer slut */
 
-
-
-/* safety font */
+/* safety font, 4 tykkelser, generated gennem Font Squirrel */
 
 @font-face {
     font-family: 'safetyregular';
@@ -465,11 +480,7 @@ footer .service_menu ul li a {
         url('font/safety-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'safetybold';
@@ -477,11 +488,7 @@ footer .service_menu ul li a {
         url('font/safety-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'safetydemibold';
@@ -489,11 +496,7 @@ footer .service_menu ul li a {
         url('font/safety-demibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'safetylight';
@@ -501,13 +504,10 @@ footer .service_menu ul li a {
         url('font/safety-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-img {
-    width: 100%;
-}
 
+/* Et par små justeringer af tekststørrelser */
 @media screen and (max-width: 1580px) {
     .streamer_name {
         font-size: 12px;
@@ -548,9 +548,22 @@ img {
     #titel {
         font-size: 27px;
     }
+
+    #stats_text {
+        width: 380px;
+        left: 70%;
+    }
+
+
 }
 
+/* tablet view */
 @media screen and (max-width: 768px) {
+
+    #stats_text p,
+    p {
+        font-size: 14px;
+    }
 
     #nav_position {
         width: 80vw;
@@ -625,14 +638,14 @@ img {
     }
 
     #stats_text {
-        width: 260px;
-        left: 75%;
+        width: 380px;
+        left: 70%;
     }
 
 
 }
 
-
+/* Mobil view */
 @media screen and (max-width: 600px) {
     .grid_container {
         grid-gap: 1px;
@@ -692,4 +705,25 @@ img {
         margin-top: 78%;
         transform: translate(-50%, -50%);
     }
+
+    #circle_headline {
+        margin-top: 1%;
+    }
+
+    #piechart {
+        width: 15%;
+        margin: 1% 42.5% 3% 42.5%;
+    }
+
+    .graph_info {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 7%;
+        margin-top: -2%;
+    }
+}
+
+/* Alle billeder sættes til 100% af bredden */
+img {
+    width: 100%;
 }
