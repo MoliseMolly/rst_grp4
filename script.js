@@ -1,11 +1,19 @@
 document.addEventListener("DOMContentLoaded", start);
+let i = 0;
 
 function start() {
+
     //link til streamers indsættes i et array. Ved at oprette links programatisk, kan det nye vindue åbnes som en ny tab, så brugeren ikke kommer væk fra sitet. Gjordes dette gennem et link i html, åbnes linket i samme tab, hvilket ikke ønskes her
     let streams = ["http://www.twitch.tv/marckozhd/", "http://www.twitch.tv/jk_fifa/", "http://www.twitch.tv/fjallefar/", "http://www.twitch.tv/brianfromdenmark/", "http://www.twitch.tv/jaxstyle/"];
     //Streamernes html elementer læses ind i et array
     let streamerList = document.querySelectorAll(".streamer_item");
 
+    //Her undersøges bredden af browseren, og hvis den ikke er i mobil størrelse, så skal der scrolles på siden før videoen begynder. Er det på mobil begynder videoen med det samme, da den kan ses på det første view
+    if (window.innerWidth > 600) {
+        window.addEventListener("scroll", playVideo);
+    } else {
+        document.querySelector("#commercial").play();
+    }
     //Eventlisteners til knapper oprettes
     document.querySelector("#burgermenu").addEventListener("click", burger);
     document.querySelector("#read_article").addEventListener("click", readArticle);
@@ -48,4 +56,13 @@ function readArticle() {
     this.style.display = "none";
     document.querySelector(".grey_gradient").style.display = "none";
     document.querySelector("#pimp_article").style.height = "auto";
+}
+
+function playVideo() {
+    i++;
+    if (i == 9) {
+        document.querySelector("#commercial").play();
+        window.removeEventListener("scroll", playVideo);
+    }
+    console.log("Der scrolles!!!");
 }
